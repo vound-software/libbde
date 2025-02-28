@@ -250,7 +250,8 @@ ssize_t libbde_metadata_entry_read(
 #endif /* defined( HAVE_DEBUG_OUTPUT ) */
 
 	if( ( version != 1 )
-	 && ( version != 3 ) )
+	 && ( version != 3 )
+	 && ( version != 0x105	) ) // version when bitlocker is is suspended mode 
 	{
 		libcerror_error_set(
 		 error,
