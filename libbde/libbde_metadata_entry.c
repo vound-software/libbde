@@ -251,14 +251,14 @@ ssize_t libbde_metadata_entry_read(
 
 	if( ( version != 1 )
 	 && ( version != 3 )
-	 && ( version != 0x105	) ) // version when bitlocker is is suspended mode 
+	 && ( version != 0x105 )) // version when bitlocker is is suspended mode 
 	{
 		libcerror_error_set(
 		 error,
 		 LIBCERROR_ERROR_DOMAIN_RUNTIME,
 		 LIBCERROR_RUNTIME_ERROR_UNSUPPORTED_VALUE,
-		 "%s: unsupported FVE metadata entry version.",
-		 function );
+		 "%s: unsupported FVE metadata entry version (version: %d).",
+		 function, version );
 
 		return( -1 );
 	}
